@@ -27,5 +27,10 @@
 ## Afficher le coût de l'intégralité de la discographie de "Deep Purple"
 `SELECT SUM(tracks.UnitPrice) FROM albums INNER JOIN artists ON albums.ArtistId=artists.ArtistId AND artists.Name="Deep Purple" INNER JOIN tracks ON albums.AlbumId=tracks.AlbumId;`
 
-## Créer l'album de ton artiste favori en base (en renseignant correctement les 3 tables *albums*, *artists* et *tracks*)
+## Créer l'album de ton artiste favori en base
+- en renseignant correctement les 3 tables
+  - *albums*
+  - *artists*
+  - *tracks*
 `SELECT tracks.Name, artists.Name FROM albums INNER JOIN artists ON albums.ArtistId=artists.ArtistId AND artists.Name="AC/DC" INNER JOIN tracks ON tracks.AlbumId=albums.AlbumId ORDER BY tracks.Name DESC LIMIT 12;`
+``
